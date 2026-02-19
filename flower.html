@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blooming Petals | Flower Shop</title>
+
+<style>
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+header 
+{
+    background: linear-gradient(to right, #ffc0cb, #ff9eb5);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff0f5;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d63384;
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+  
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    color: #d63384;
+}
+
+
+.sidebar {
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact {
+    background: #ffe4ec;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ffc0cb;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    background: #ff9eb5;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d63384;
+}
+
+
+footer {
+    background: #ff9eb5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .products {
+        flex: 3;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 48%;
+    }
+
+    .sidebar {
+        flex: 1;
+        position: sticky;
+        top: 20px;
+    }
+
+    form {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 30%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1> Blooming Petals</h1>
+    <p>Luxury Flowers for Every Occasion</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <img src="shop.jpeg" alt="Flowers">
+</section>
+
+<div class="container" id="shop">
+
+    <section class="products">
+
+        <div class="card">
+            <img src="f1.jpeg">
+            <div class="card-content">
+                <h3>Premium Roses</h3>
+                <p>Elegant roses .</p>
+                 <p><b>16000.pkr</b></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="f3.jpeg">
+            <div class="card-content">
+                <h3>Spring Tulips</h3>
+                <p>Fresh tulips.</p>
+                 <p><b>12000.pkr</b></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="f5.jpeg">
+            <div class="card-content">
+                <h3>Daisies</h3>
+                <p> cheerful blooms.</p>
+                 <p><b>19000.pkr</b></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="f2.jpeg">
+            <div class="card-content">
+                <h3>Wedding Bouquet</h3>
+                <p>Special Bouquet.</p>
+                 <p><b>10000.pkr</b></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="f6.jpeg">
+            <div class="card-content">
+                <h3>Premium Bouquet</h3>
+                <p>Pink Bouquet</p>
+                 <p><b>19000.pkr</b></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="f4.jpeg">
+            <div class="card-content">
+                <h3>Tulips</h3>
+                <p> elegant Tulips.</p>
+                 <p><b>15000.pkr</b></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Pretty.jpeg">
+            <div class="card-content">
+                <h3>Orchids</h3>
+                <p> elegant orchids.</p>
+                 <p><b>12000.pkr</b></p>
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="f9.jpeg">
+            <div class="card-content">
+                <h3>White Flowers</h3>
+                <p>Premium White Flower.</p>
+                 <p><b>17000.pkr</b></p>
+            </div>
+        </div>
+         <div class="card">
+            <img src="f8.jpeg">
+            <div class="card-content">
+                <h3>Roses</h3>
+                <p>Red Roses.</p>
+                <p><b>22000.pkr</b></p>
+            </div>
+        </div>
+    </section>
+
+    <aside class="sidebar">
+        <h3>🌷 Special Offer</h3>
+        <p>25% OFF on Seasonal Flowers</p>
+        <p>Free Home Delivery</p>
+    </aside>
+
+</div>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+                <input type="number" placeholder="Phone Number" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>Flower retail and Delivery service offering Frresh, Premium Flowers across lahore.<br>So stop smell the roses and shop your picks From blooming petals.  </p>
+    <br>
+    <p>Get your Blooming updates before Anyone</p>
+       <form>
+       
+        <input type="email" placeholder="Your Email" required>
+       
+        <button type="submit">Submit</button>
+    </form>
+    <p>© 2026 Blooming Petals | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
